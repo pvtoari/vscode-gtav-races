@@ -1,0 +1,51 @@
+{
+	"name": "gtav-races",
+	"displayName": "GTA V Races",
+	"description": "Background GTA V Races to satisfy your dopamine needs",
+	"homepage": "https://marketplace.visualstudio.com/items?itemName=ariel-roque.gtav-races",
+	"repository": "github:pvtoari/vscode-gtav-races",
+	"publisher": "ariel-roque",
+	"contributors": [
+		{
+			"name": "Ariel Roque",
+			"email": "arieroque@protonmail.com"
+		}
+	],
+	"version": "0.0.1",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.77.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "gtav-races.dopamine",
+				"title": "GTA V Races: Honey, it's time for your daily dopamine dose!"
+			}
+		]
+	},
+	"scripts": {
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"vscode:prepublish": "npm run esbuild-base -- --minify",
+		"esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+		"esbuild": "npm run esbuild-base -- --sourcemap",
+		"esbuild-watch": "npm run esbuild-base -- --sourcemap --watch"
+	},
+	"devDependencies": {
+		"@types/node": "16.x",
+		"@types/vscode": "^1.77.0",
+		"@typescript-eslint/eslint-plugin": "^5.59.1",
+		"@typescript-eslint/parser": "^5.59.1",
+		"esbuild": "^0.17.18",
+		"eslint": "^8.39.0",
+		"typescript": "^5.0.4"
+	}
+}
