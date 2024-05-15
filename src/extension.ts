@@ -1,10 +1,11 @@
 import * as vscode from "vscode";
 
 const urls = [
-	"https://www.youtube.com/watch?v=XrD4GlrLWwc",
-	"https://www.youtube.com/watch?v=5mCyFu2JCIE",
-	"https://www.youtube.com/watch?v=Csrt-5lNdgs",
-	"https://www.youtube.com/watch?v=PiqfEh239Z8",
+	"https://yewtu.be/latest_version?id=XrD4GlrLWwc#t=19", //youtube video link doesnt work kauman
+	"https://yewtu.be/latest_version?id=5mCyFu2JCIE#t=20",
+	"https://yewtu.be/latest_version?id=Csrt-5lNdgs#t=10",
+	"https://yewtu.be/latest_version?id=PiqfEh239Z8#t=14",
+	"https://yewtu.be/latest_version?id=ZtLrNBdXT7M#t=4"
 	// U can add more videos here
 ];
 
