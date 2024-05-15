@@ -1,6 +1,19 @@
 import * as vscode from "vscode";
 
-const getWebviewContent = () => `
+const urls = [
+	"https://www.youtube.com/watch?v=XrD4GlrLWwc",
+	"https://www.youtube.com/watch?v=5mCyFu2JCIE",
+	"https://www.youtube.com/watch?v=Csrt-5lNdgs",
+	"https://www.youtube.com/watch?v=PiqfEh239Z8",
+	// U can add more videos here
+];
+
+const getRandomUrl = () => {
+	const randomIndex = Math.floor(Math.random() * urls.length);
+	return urls[randomIndex];
+};
+
+const getWebviewContent = (url: string) => `
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -28,7 +41,7 @@ const getWebviewContent = () => `
 		</head>
 		<body>
 			<video autoplay muted>
-				<source src="https://yewtu.be/latest_version?id=ZtLrNBdXT7M#t=4" />
+				<source src="${url}" />
 			</video>
 		</body>
 	</html>
@@ -45,7 +58,8 @@ export function activate(context: vscode.ExtensionContext) {
 				{ enableScripts: true }
 			);
 
-			panel.webview.html = getWebviewContent();
+			const randomUrl = getRandomUrl();
+			panel.webview.html = getWebviewContent(randomUrl);
 		}
 	);
 
