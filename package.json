@@ -2,6 +2,7 @@
 	"name": "gtav-races",
 	"displayName": "GTA V Races",
 	"description": "Background GTA V Races to satisfy your dopamine needs",
+	"icon": "images/icon.png",
 	"homepage": "https://marketplace.visualstudio.com/items?itemName=ariel-roque.gtav-races",
 	"repository": "github:pvtoari/vscode-gtav-races",
 	"publisher": "ariel-roque",
@@ -11,7 +12,7 @@
 			"email": "arieroque@protonmail.com"
 		}
 	],
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.77.0"
